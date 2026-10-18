@@ -1,0 +1,313 @@
+ <!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIKMA Restaurant - Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-text">HIKMA</h1>
+            <p class="logo-subtext">HC | Restaurant</p>
+        </div>
+        <div class="chef-name">
+            <p>Executive Chef: <span>IDRIS MOHAMMED</span></p>
+        </div>
+    </header>
+
+    <!-- SEARCH BAR & FILTER BUTTONS -->
+    <section class="controls-section">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ፍለጋ (Search for food)..." onkeyup="searchMenu()">
+        </div>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterMenu('all')">ሁሉም (All)</button>
+            <button class="filter-btn" onclick="filterMenu('kuras')">ቁርስ</button>
+            <button class="filter-btn" onclick="filterMenu('asa')">ዓሳ</button>
+            <button class="filter-btn" onclick="filterMenu('misa')">ምሳ</button>
+            <button class="filter-btn" onclick="filterMenu('arast')">አራት</button>
+        </div>
+    </section>
+
+    <!-- MENU GRID SECTION -->
+    <main class="menu-container" id="menuGrid">
+
+        <!-- ================= ምሳ (Lunch / Main Dishes) ================= -->
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001722_Gallery.jpg" alt="መቀስስ" onclick="openModal(this.src, 'መቀስስ', '8,000 Br.')">
+            <div class="card-info">
+                <h3>መቀስስ</h3>
+                <p class="price">8,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001727_Gallery.jpg" alt="ሙሉ መንዲ" onclick="openModal(this.src, 'ሙሉ መንዲ', '5,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ መንዲ</h3>
+                <p class="price">5,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001732_Gallery.jpg" alt="ግማሽ መንዲ" onclick="openModal(this.src, 'ግማሽ መንዲ', '4,000 Br.')">
+            <div class="card-info">
+                <h3>ግማሽ መንዲ</h3>
+                <p class="price">4,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001920_Gallery.jpg" alt="ሩብ መንዲ" onclick="openModal(this.src, 'ሩብ መንዲ', '5,000 Br.')">
+            <div class="card-info">
+                <h3>ሩብ መንዲ</h3>
+                <p class="price">5,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001925_Gallery.jpg" alt="ሙሉ ስፔሻል" onclick="openModal(this.src, 'ሙሉ ስፔሻል', '6,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ ስፔሻል</h3>
+                <p class="price">6,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001930_Gallery.jpg" alt="1/2 ስ. መንዲ" onclick="openModal(this.src, '1/2 ስ. መንዲ', '3,000 Br.')">
+            <div class="card-info">
+                <h3>1/2 ስ. መንዲ</h3>
+                <p class="price">3,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001935_Gallery.jpg" alt="ጥብስ" onclick="openModal(this.src, 'ጥብስ', '700 Br.')">
+            <div class="card-info">
+                <h3>ጥብስ</h3>
+                <p class="price">700 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001940_Gallery.jpg" alt="ስፔሻል ጥብስ" onclick="openModal(this.src, 'ስፔሻል ጥብስ', '1,150 Br.')">
+            <div class="card-info">
+                <h3>ስፔሻል ጥብስ</h3>
+                <p class="price">1,150 Br.</p>
+            </div>
+        </div>
+ <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001946_Gallery.jpg" alt="ብራወን ጥብስ" onclick="openModal(this.src, 'ብራወን ጥብስ', '650 Br.')">
+            <div class="card-info">
+                <h3>ብራወን ጥብስ</h3>
+                <p class="price">650 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001951_Gallery.jpg" alt="ካብሳ" onclick="openModal(this.src, 'ካብሳ', '2,500 Br.')">
+            <div class="card-info">
+                <h3>ካብሳ</h3>
+                <p class="price">2,500 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_001957_Gallery.jpg" alt="ሩዝ በስጋ" onclick="openModal(this.src, 'ሩዝ በስጋ', '2,500 Br.')">
+            <div class="card-info">
+                <h3>ሩዝ በስጋ</h3>
+                <p class="price">2,500 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_002002_Gallery.jpg" alt="ሙሉ ኮምቦ" onclick="openModal(this.src, 'ሙሉ ኮምቦ', '7,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ ኮምቦ</h3>
+                <p class="price">7,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_002007_Gallery.jpg" alt="ግማሽ ኮምቦ" onclick="openModal(this.src, 'ግማሽ ኮምቦ', '3,600 Br.')">
+            <div class="card-info">
+                <h3>ግማሽ ኮምቦ</h3>
+                <p class="price">3,600 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="misa">
+            <img src="img/Screenshot_20261018_002012_Gallery.jpg" alt="የሰደቃ ወጥ" onclick="openModal(this.src, 'የሰደቃ ወጥ', '500 Br.')">
+            <div class="card-info">
+                <h3>የሰደቃ ወጥ</h3>
+                <p class="price">500 Br.</p>
+            </div>
+        </div>
+
+        <!-- ================= ቁርስ (Breakfast) ================= -->
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_002022_Gallery.jpg" alt="ዱለት ስፔሻል" onclick="openModal(this.src, 'ዱለት ስፔሻል', '500 Br.')">
+            <div class="card-info">
+                <h3>ዱለት ስፔሻል</h3>
+                <p class="price">500 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_002028_Gallery.jpg" alt="እንቁላል በስጋ" onclick="openModal(this.src, 'እንቁላል በስጋ', '600 Br.')">
+            <div class="card-info">
+                <h3>እንቁላል በስጋ</h3>
+                <p class="price">600 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_002032_Gallery.jpg" alt="በቋንጣ ፍርፍር" onclick="openModal(this.src, 'በቋንጣ ፍርፍር', '650 Br.')">
+            <div class="card-info">
+                <h3>በቋንጣ ፍርፍር</h3>
+                <p class="price">650 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_003109_Gallery.jpg" alt="ጥብስ ፍርፍር" onclick="openModal(this.src, 'ጥብስ ፍርፍር', '700 Br.')">
+            <div class="card-info">
+                <h3>ጥብስ ፍርፍር</h3>
+                <p class="price">700 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_003115_Gallery.jpg" alt="ስጋ ፍርፍር" onclick="openModal(this.src, 'ስጋ ፍርፍር', '600 Br.')">
+            <div class="card-info">
+                <h3>ስጋ ፍርፍር</h3>
+                <p class="price">600 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_003120_Gallery.jpg" alt="ኪፉደ" onclick="openModal(this.src, 'ኪፉደ', '500 Br.')">
+            <div class="card-info">
+                <h3>ኪፉደ</h3>
+                <p class="price">500 Br.</p>
+            </div>
+        </div>
+ <div class="menu-card" data-category="kuras">
+            <img src="img/Screenshot_20261018_003125_Gallery.jpg" alt="ድርቆሽ በቋንጣ" onclick="openModal(this.src, 'ድርቆሽ በቋንጣ', '650 Br.')">
+            <div class="card-info">
+                <h3>ድርቆሽ በቋንጣ</h3>
+                <p class="price">650 Br.</p>
+            </div>
+        </div>
+
+        <!-- ================= አራስት (Chicken / Poultry) ================= -->
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003134_Gallery.jpg" alt="ሙሉ ዶሮ አራስት" onclick="openModal(this.src, 'ሙሉ ዶሮ አራስት', '4,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ ዶሮ አራስት</h3>
+                <p class="price">4,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003435_Gallery.jpg" alt="ግማሽ ዶሮ አራስት" onclick="openModal(this.src, 'ግማሽ ዶሮ አራስት', '2,000 Br.')">
+            <div class="card-info">
+                <h3>ግማሽ ዶሮ አራስት</h3>
+                <p class="price">2,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003440_Gallery.jpg" alt="ሙሉ ብራስት" onclick="openModal(this.src, 'ሙሉ ብራስት', '4,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ ብራስት</h3>
+                <p class="price">4,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003445_Gallery.jpg" alt="ግማሽ ፍራይድ" onclick="openModal(this.src, 'ግማሽ ፍራይድ', '2,000 Br.')">
+            <div class="card-info">
+                <h3>ግማሽ ፍራይድ</h3>
+                <p class="price">2,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003450_Gallery.jpg" alt="ሩብ ፍራይድ" onclick="openModal(this.src, 'ሩብ ፍራይድ', '1,000 Br.')">
+            <div class="card-info">
+                <h3>ሩብ ፍራይድ</h3>
+                <p class="price">1,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003454_Gallery.jpg" alt="ሙሉ ቺክን ግሪል" onclick="openModal(this.src, 'ሙሉ ቺክን ግሪል', '4,000 Br.')">
+            <div class="card-info">
+                <h3>ሙሉ ቺክን ግሪል</h3>
+                <p class="price">4,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003459_Gallery.jpg" alt="ግማሽ ቺክን ግሪል" onclick="openModal(this.src, 'ግማሽ ቺክን ግሪል', '2,000 Br.')">
+            <div class="card-info">
+                <h3>ግማሽ ቺክን ግሪል</h3>
+                <p class="price">2,000 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="arast">
+            <img src="img/Screenshot_20261018_003504_Gallery.jpg" alt="ሩብ ቺከን ግሪል" onclick="openModal(this.src, 'ሩብ ቺከን ግሪል', '1,000 Br.')">
+            <div class="card-info">
+                <h3>ሩብ ቺከን ግሪል</h3>
+                <p class="price">1,000 Br.</p>
+            </div>
+        </div>
+
+        <!-- ================= ዓሳ (Fish) ================= -->
+        <div class="menu-card" data-category="asa">
+            <img src="img/Screenshot_20261018_003514_Gallery.jpg" alt="ዓሳ ኮተሌት" onclick="openModal(this.src, 'ዓሳ ኮተሌት', '700 Br.')">
+            <div class="card-info">
+                <h3>ዓሳ ኮተሌት</h3>
+                <p class="price">700 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="asa">
+            <img src="img/Screenshot_20261018_003518_Gallery.jpg" alt="ዓሳ ጉላሽ" onclick="openModal(this.src, 'ዓሳ ጉላሽ', '600 Br.')">
+            <div class="card-info">
+                <h3>ዓሳ ጉላሽ</h3>
+                <p class="price">600 Br.</p>
+            </div>
+        </div>
+
+        <div class="menu-card" data-category="asa">
+            <img src="img/Screenshot_20261018_003523_Gallery.jpg" alt="ዓሳ ለብለብ" onclick="openModal(this.src, 'ዓሳ ለብለብ', '600 Br.')">
+            <div class="card-info">
+                <h3>ዓሳ ለብለብ</h3>
+                <p class="price">600 Br.</p>
+            </div>
+        </div>
+
+    </main>
+ <!-- POPUP MODAL (Hidden by default) -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption"></div>
+        <div id="modalPrice"></div>
+    </div>
+
+    <!-- BACK TO TOP JUMP BUTTON -->
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- Link to JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
